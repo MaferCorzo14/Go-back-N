@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-data: #0ea5e9;
+  --color-ack: #10b981;
+  --color-lost: #f43f5e;
+  --color-retx: #f59e0b;
+  --color-window: #6366f1;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+#root {
+  /* min-height (y no height) para que el fondo cubra todo el documento
+     cuando el contenido es más alto que la ventana. */
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #e9edf6;
+  background-image: radial-gradient(circle at 15% 0%, #d9e3fb 0%, rgba(233, 237, 246, 0) 55%);
+  background-repeat: no-repeat;
+  color: #1e293b;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Rieles de slider consistentes entre navegadores */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(100, 116, 139, 0.25);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 2px solid #6366f1;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 2px solid #6366f1;
+  cursor: pointer;
+}
+
+input[type="range"]:disabled {
+  opacity: 0.45;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.28);
+  border-radius: 999px;
+}
